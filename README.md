@@ -1,10 +1,10 @@
-# Docker Image Monitor
+# DIM - Docker Image Monitor
 
 Listen on docker events and register image usage time.
 
 ## Installation
 ```
-sudo pip install http://github.com/stratoscale/image-collector.git
+sudo pip install http://github.com/stratoscale/dim.git
 ```
 
 ## Usage
