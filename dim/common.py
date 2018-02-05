@@ -13,7 +13,7 @@ def get_local_images(docker_client):
     """
     local_images = []
     for image in docker_client.images():
-        local_images.extend(image['RepoTags'])
+        local_images.extend(image.get('RepoTags', []))
 
     return local_images
 
