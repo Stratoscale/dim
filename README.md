@@ -4,7 +4,7 @@ Listen on docker events and register image usage time.
 
 ## Installation
 ```
-sudo pip install http://github.com/stratoscale/dim.git
+sudo pip install git+http://github.com/stratoscale/dim.git
 ```
 
 ## Usage
