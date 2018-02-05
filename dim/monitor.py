@@ -14,6 +14,7 @@ def monitor(docker_client):
 
     :param docker.client.APIClient docker_client: docker api client.
     """
+    common.setup_history()
     history = common.load_history()
 
     logger.info("Starting image-monitor")
