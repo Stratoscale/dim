@@ -6,17 +6,13 @@ Listen on docker events and register image usage time.
 ```
 sudo pip install git+http://github.com/stratoscale/dim.git
 ```
-
-## Usage
-
-### Monitoring
 The installation will add the dim service to systemd, make sure you reload it.
-
 ```
 systemctl daemon-reload
 systemctl start dim.service
-``` 
-### Display
+```
+
+## Usage
 
 To display the images last start time run
 ```
