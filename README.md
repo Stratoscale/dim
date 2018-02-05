@@ -14,13 +14,8 @@ The installation will add the dim service to systemd, make sure you reload it.
 
 ```
 systemctl daemon-reload
+systemctl start dim.service
 ``` 
-
-To start a monitoring process manually run
-```
-dim-monitor
-```
-
 ### Display
 
 To display the images last start time run
