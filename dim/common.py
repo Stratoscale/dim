@@ -20,18 +20,25 @@ def get_local_images(docker_client):
 
 def save_history(data):
     """Save history to file."""
-    dir_path = os.path.dirname(HISTORY_PATH)
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path)
-
+    setup_history()
     json.dump(data, open(HISTORY_PATH, "w"))
 
 
 def load_history():
     """Load history from file, on failure start fresh"""
-    if not os.path.exists(HISTORY_PATH):
-        return {}
+    setup_history()
     try:
         return json.load(open(HISTORY_PATH, "r"))
     except:
         return {}
+
+
+def setup_history():
+    """Create the history directory and file if ."""
+    dir_path = os.path.dirname(HISTORY_PATH)
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+
+    if not os.path.exists(HISTORY_PATH):
+        with open(HISTORY_PATH, 'w') as history_file:
+            json.dump({}, history_file)

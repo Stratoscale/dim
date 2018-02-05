@@ -9,11 +9,10 @@ logger = logging.getLogger('dim')
 logging.basicConfig(level=logging.INFO)
 
 
-def monitor(docker_client, history_path):
+def monitor(docker_client):
     """Listen on docker events and register image usage time.
 
     :param docker.client.APIClient docker_client: docker api client.
-    :param str history_path: image usage history file path.
     """
     history = common.load_history()
 
@@ -65,8 +64,7 @@ def ts_to_string(timestamp):
 
 
 def main():
-    monitor(history_path="/usr/share/dim/etc/history.json",
-            docker_client=docker.client.APIClient())
+    monitor(docker_client=docker.client.APIClient())
 
 
 if __name__ == '__main__':
