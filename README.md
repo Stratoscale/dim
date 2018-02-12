@@ -9,6 +9,7 @@ sudo pip install git+http://github.com/stratoscale/dim.git
 The installation will add the dim service to systemd, make sure you reload it.
 ```
 systemctl daemon-reload
+systemctl enable dim.service
 systemctl start dim.service
 ```
 
