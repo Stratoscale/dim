@@ -55,7 +55,7 @@ Display Images Last Start Time.
 
 optional arguments:
   -h, --help            show this help message and exit
-  -q, --quite           If set, returns only the image names
+  -q, --quiet           If set, returns only the image names
   -w WHITELIST, --whitelist WHITELIST
                         Images whitelist file
   -m MIN_AGE, --min-age MIN_AGE
